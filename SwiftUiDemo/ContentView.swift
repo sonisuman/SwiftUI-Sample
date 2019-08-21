@@ -10,7 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+      //VStack - vertical stack
+      //Hstack - horizontal
+      //Zstack - overlapp to each other
+      VStack(alignment: .center) {
+        Image("chalkboard")
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+          .clipShape(Circle())
+          .cornerRadius(20)
+          //.padding(.all)
+        Text("First Line")
+        .font(.title)
+          .foregroundColor(.gray)
+        Text("Second Line")
+          .font(.title)
+          .foregroundColor(.blue)
+        
+        HStack {
+          Text("left side")
+          Text("Right side")
+        }
+      }
     }
 }
 
